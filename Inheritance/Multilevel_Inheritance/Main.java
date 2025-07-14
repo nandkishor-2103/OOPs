@@ -1,4 +1,3 @@
-package Multilevel_Inheritance;
 
 // Parent --> super class
 class School {

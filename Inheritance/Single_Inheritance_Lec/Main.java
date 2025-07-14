@@ -1,5 +1,3 @@
-package Single_Inheritance_Lec;
-
 // Parent --> super class
 class School {
     private String name;
