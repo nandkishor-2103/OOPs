@@ -4,12 +4,16 @@ package Single_Inheritance_Lec;
 class School {
     private String name;
 
-    School() {
-        name = "DPS";
+    School(String name) {
+        this.name = name;
     }
 
     void printSchoolName() {
         System.out.println("School name : " + name);
+    }
+
+    void demo() {
+        System.out.println("demo by school");
     }
 }
 
@@ -18,11 +22,18 @@ class Student extends School{
     private String name;
 
     Student(String name) {
+        super("DPS"); // parent constructor invoked/ called
         this.name = name;
     }
 
     void printStudentName() {
         System.out.println("Student name : " + name);
+    }
+
+    @Override
+    void demo() {
+        super.demo();
+        System.out.println("demo by student");
     }
 }
 
@@ -33,5 +44,6 @@ public class Main {
 
         student.printSchoolName();
         student.printStudentName();
+        student.demo();
     }
 }
